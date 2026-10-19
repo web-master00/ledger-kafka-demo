@@ -1,0 +1,29 @@
+{
+  "name": "ledger-kafka-outbox-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Client-facing demo of reliable event processing with Node.js, TypeScript, PostgreSQL and Kafka",
+  "scripts": {
+    "dev:api": "tsx watch src/api.ts",
+    "dev:publisher": "tsx watch src/outbox-publisher.ts",
+    "dev:consumer": "tsx watch src/ledger-consumer.ts",
+    "build": "tsc",
+    "start:api": "node dist/api.js",
+    "start:publisher": "node dist/outbox-publisher.js",
+    "start:consumer": "node dist/ledger-consumer.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0",
+    "kafkajs": "^2.2.4",
+    "pg": "^8.13.3",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.13.10",
+    "@types/pg": "^8.11.11",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  }
+}
